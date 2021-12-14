@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DE0EEAD-685A-4E82-891D-740CAA5529A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayer</RootNamespace>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>337b0b6c</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ECommerceContext.cs" />
+    <Compile Include="Migrations\202107271354285_Initial.cs" />
+    <Compile Include="Migrations\202107271354285_Initial.Designer.cs">
+      <DependentUpon>202107271354285_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107271357322_AdminModel.cs" />
+    <Compile Include="Migrations\202107271357322_AdminModel.Designer.cs">
+      <DependentUpon>202107271357322_AdminModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107271419380_ProdcutModel.cs" />
+    <Compile Include="Migrations\202107271419380_ProdcutModel.Designer.cs">
+      <DependentUpon>202107271419380_ProdcutModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107280654076_CategoryModel.cs" />
+    <Compile Include="Migrations\202107280654076_CategoryModel.Designer.cs">
+      <DependentUpon>202107280654076_CategoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107280654528_CategoryModels.cs" />
+    <Compile Include="Migrations\202107280654528_CategoryModels.Designer.cs">
+      <DependentUpon>202107280654528_CategoryModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107281133173_CartModel.cs" />
+    <Compile Include="Migrations\202107281133173_CartModel.Designer.cs">
+      <DependentUpon>202107281133173_CartModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107290959549_Orders.cs" />
+    <Compile Include="Migrations\202107290959549_Orders.Designer.cs">
+      <DependentUpon>202107290959549_Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107291240581_OrdersModels.cs" />
+    <Compile Include="Migrations\202107291240581_OrdersModels.Designer.cs">
+      <DependentUpon>202107291240581_OrdersModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductDetails.cs" />
+    <Compile Include="Models\RespLogin.cs" />
+    <Compile Include="Models\RespMessage.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202107271354285_Initial.resx">
+      <DependentUpon>202107271354285_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107271357322_AdminModel.resx">
+      <DependentUpon>202107271357322_AdminModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107271419380_ProdcutModel.resx">
+      <DependentUpon>202107271419380_ProdcutModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107280654076_CategoryModel.resx">
+      <DependentUpon>202107280654076_CategoryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107280654528_CategoryModels.resx">
+      <DependentUpon>202107280654528_CategoryModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107281133173_CartModel.resx">
+      <DependentUpon>202107281133173_CartModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107290959549_Orders.resx">
+      <DependentUpon>202107290959549_Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107291240581_OrdersModels.resx">
+      <DependentUpon>202107291240581_OrdersModels.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
